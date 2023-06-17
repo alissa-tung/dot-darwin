@@ -26,6 +26,8 @@ in ({
       interactiveShellInit =
         ''
           source "${pkgs.grml-zsh-config}/etc/zsh/zshrc"
+          source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+          source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
         ''
         + builtins.readFile ../cfg/zshrc;
     };
