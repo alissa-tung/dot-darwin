@@ -1,0 +1,14 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "window.titleBarStyle": "custom",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Everforest Dark",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorStyle": "block",
+  "terminal.integrated.defaultProfile.osx": "zsh"
+}
