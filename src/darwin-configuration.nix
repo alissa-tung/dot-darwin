@@ -6,19 +6,8 @@
   pkgs = import <nixpkgs> {config.allowUnfree = true;};
 in ({
     environment.systemPackages = with pkgs;
-      [
-        neovim
-        git
-        gcc
-        gnumake
-        starship
-        alejandra
-        fd
-        deno
-      ]
-      ++ [
-        (import ../pkgs/vscode.nix {inherit pkgs;})
-      ];
+      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan]
+      ++ [(import ../pkgs/vscode.nix {inherit pkgs;})];
 
     programs.zsh = {
       enable = true;
@@ -33,7 +22,10 @@ in ({
     };
 
     services.nix-daemon.enable = true;
-    nix.package = pkgs.nix;
+    nix = {
+      package = pkgs.nix;
+      extraOptions = builtins.readFile ../cfg/nix.conf;
+    };
   }
   // {
     system.stateVersion = 4;

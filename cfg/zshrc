@@ -18,3 +18,5 @@ export HEX_MIRROR="$HEX_CDN"
 export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 export PATH="$PATH:$HOME/.cargo/bin"
+
+export PATH="$PATH:$HOME/.local/share/flutter/bin"

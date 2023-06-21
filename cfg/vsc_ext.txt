@@ -1,1 +1,5 @@
 sainnhe.everforest
+dart-code.dart-code
+dart-code.flutter
+rust-lang.rust-analyzer
+leanprover.lean4

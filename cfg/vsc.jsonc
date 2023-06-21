@@ -1,8 +1,9 @@
 {
   "workbench.startupEditor": "newUntitledFile",
   "window.titleBarStyle": "custom",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.minimap.enabled": false,
