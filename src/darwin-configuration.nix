@@ -6,8 +6,22 @@
   pkgs = import <nixpkgs> {config.allowUnfree = true;};
 in ({
     environment.systemPackages = with pkgs;
-      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan gmp coreutils shellcheck jq]
-      ++ [(import ../pkgs/vscode.nix {inherit pkgs;})];
+      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan gmp coreutils shellcheck jq unar]
+      ++ [(import ../pkgs/vscode.nix {inherit pkgs;})]
+      ++ [
+        (
+          python312.withPackages (pythonPackages:
+            with pythonPackages; [])
+        )
+      ]
+      ++ [
+        (agda.withPackages (agdaPackages:
+          with agdaPackages; [
+            standard-library
+            cubical
+            agda-categories
+          ]))
+      ];
 
     programs.zsh = {
       enable = true;
@@ -29,5 +43,4 @@ in ({
   }
   // {
     system.stateVersion = 4;
-  }
-  // (import ./home.nix {inherit config lib pkgs;}))
+  })

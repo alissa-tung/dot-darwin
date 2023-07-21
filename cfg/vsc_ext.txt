@@ -3,3 +3,9 @@ dart-code.dart-code
 dart-code.flutter
 rust-lang.rust-analyzer
 leanprover.lean4
+haskell.haskell
+ms-python.python
+ms-python.pylint
+ms-python.vscode-pylance
+redhat.vscode-yaml
+banacorn.agda-mode
