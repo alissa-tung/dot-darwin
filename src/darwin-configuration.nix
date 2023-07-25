@@ -6,7 +6,7 @@
   pkgs = import <nixpkgs> {config.allowUnfree = true;};
 in ({
     environment.systemPackages = with pkgs;
-      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan gmp coreutils shellcheck jq unar]
+      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan gmp coreutils shellcheck jq unar bottom rlwrap]
       ++ [(import ../pkgs/vscode.nix {inherit pkgs;})]
       ++ [
         (
