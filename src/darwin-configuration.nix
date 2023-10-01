@@ -5,13 +5,43 @@
 }: let
   pkgs = import <nixpkgs> {config.allowUnfree = true;};
 in ({
+    environment.variables = {
+      EDITOR = "nvim";
+      LANG = "en_US.UTF-8";
+    };
+
     environment.systemPackages = with pkgs;
-      [neovim git gcc gnumake alejandra fd deno clang-tools yamlfmt rustup elan gmp coreutils shellcheck jq unar bottom rlwrap]
+      [
+        neovim
+        git
+        gcc
+        gnumake
+        alejandra
+        fd
+        deno
+        clang-tools
+        yamlfmt
+        rustup
+        elan
+        gmp
+        coreutils
+        shellcheck
+        jq
+        unar
+        bottom
+        rlwrap
+        tree
+        nodejs
+        ripgrep
+        libiconv
+        darwin.apple_sdk.frameworks.Security
+      ]
       ++ [(import ../pkgs/vscode.nix {inherit pkgs;})]
       ++ [
         (
-          python312.withPackages (pythonPackages:
-            with pythonPackages; [])
+          python311.withPackages (pythonPackages:
+            with pythonPackages; [
+            ])
         )
       ]
       ++ [

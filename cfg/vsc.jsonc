@@ -11,5 +11,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "block",
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "redhat.telemetry.enabled": true,
+  "update.showReleaseNotes": false,
+  "rust-analyzer.server.path": "/run/current-system/sw/bin/rust-analyzer"
 }

@@ -9,3 +9,4 @@ ms-python.pylint
 ms-python.vscode-pylance
 redhat.vscode-yaml
 banacorn.agda-mode
+ms-vscode-remote.remote-ssh
