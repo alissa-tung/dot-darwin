@@ -8,7 +8,6 @@ in ({
     services.nix-daemon.enable = true;
     nix = {
       package = pkgs.nix;
-      extraOptions = builtins.readFile ../cfg/nix.conf;
 
       settings = {
         experimental-features = ["nix-command" "flakes" "repl-flake"];
