@@ -5,6 +5,22 @@
 }: let
   pkgs = import <nixpkgs> {config.allowUnfree = true;};
 in ({
+    services.nix-daemon.enable = true;
+    nix = {
+      package = pkgs.nix;
+      extraOptions = builtins.readFile ../cfg/nix.conf;
+
+      settings = {
+        experimental-features = ["nix-command" "flakes" "repl-flake"];
+
+        substituters = [
+          "https://mirrors.bfsu.edu.cn/nix-channels/store/"
+          "https://mirror.sjtu.edu.cn/nix-channels/store"
+          "https://cache.nixos.org"
+        ];
+      };
+    };
+
     environment.variables = {
       EDITOR = "nvim";
       LANG = "en_US.UTF-8";
@@ -12,46 +28,36 @@ in ({
 
     environment.systemPackages = with pkgs;
       [
+        coreutils
+        openssh
         neovim
         git
-        gcc
         gnumake
-        alejandra
-        fd
-        deno
+        cmake
+        gcc
         clang-tools
-        yamlfmt
-        rustup
-        elan
-        gmp
-        coreutils
-        shellcheck
-        jq
-        unar
-        bottom
-        rlwrap
-        tree
-        nodejs
+        fd
         ripgrep
-        libiconv
-        darwin.apple_sdk.frameworks.Security
+        jq
+        curl
+        unar
+        tree
+        rlwrap
+        bottom
       ]
-      ++ [(import ../pkgs/vscode.nix {inherit pkgs;})]
-      ++ [
-        (
-          python311.withPackages (pythonPackages:
-            with pythonPackages; [
-            ])
-        )
-      ]
-      ++ [
-        (agda.withPackages (agdaPackages:
-          with agdaPackages; [
-            standard-library
-            cubical
-            agda-categories
-          ]))
-      ];
+      ++ [alejandra nixfmt nil deno yamlfmt taplo ormolu hlint shellcheck]
+      ++ [rustup elan nodejs]
+      ++ [caddy]
+      ++ [gmp libiconv]
+      ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
+      ++ lib.lists.singleton (python311.withPackages
+        (pythonPackages: with pythonPackages; [pyyaml loguru]))
+      ++ lib.lists.singleton (agda.withPackages (agdaPackages:
+        with agdaPackages; [
+          standard-library
+          cubical
+          agda-categories
+        ]));
 
     programs.zsh = {
       enable = true;
@@ -63,12 +69,6 @@ in ({
           source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
         ''
         + builtins.readFile ../cfg/zshrc;
-    };
-
-    services.nix-daemon.enable = true;
-    nix = {
-      package = pkgs.nix;
-      extraOptions = builtins.readFile ../cfg/nix.conf;
     };
   }
   // {

@@ -3,12 +3,11 @@
 all: fmt link update switch
 
 fmt:
-	(fd -e nix -x alejandra -q)
+	(fd -e nix -x nixfmt && fd -e nix -x alejandra -q)
 	(deno -q fmt)
 
 link:
 	(ln -sf ${PWD}/src/darwin-configuration.nix ${HOME}/.nixpkgs/darwin-configuration.nix)
-	(ln -sf ${PWD}/src/config.nix               ${HOME}/.nixpkgs/config.nix)
 	(ln -sf ${PWD}/cfg/vsc.jsonc                ${HOME}'/Library/Application Support/Code/User/settings.json')
 
 update:

@@ -1,4 +1,5 @@
 {
+  "update.mode": "none",
   "workbench.startupEditor": "newUntitledFile",
   "window.titleBarStyle": "custom",
   "editor.fontLigatures": false,
@@ -14,5 +15,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "redhat.telemetry.enabled": true,
   "update.showReleaseNotes": false,
-  "rust-analyzer.server.path": "/run/current-system/sw/bin/rust-analyzer"
+  "rust-analyzer.server.path": "/run/current-system/sw/bin/rust-analyzer",
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil"
 }
