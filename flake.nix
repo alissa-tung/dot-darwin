@@ -12,11 +12,11 @@
     self,
     nixpkgs,
     nix-darwin,
-  }: {
-    formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
-
-    darwinConfigurations."pod-13" = nix-darwin.lib.darwinSystem {
-      modules = [./src/darwin-configuration.nix];
-    };
-  };
+  }: let
+    lib = nixpkgs.lib;
+    flake-lib = import ./src/lib.nix {inherit nixpkgs nix-darwin;};
+  in
+    {}
+    // builtins.foldl' (acc: x: lib.recursiveUpdate acc x) {}
+    flake-lib.buildOutputs;
 }

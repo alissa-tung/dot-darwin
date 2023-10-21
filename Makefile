@@ -1,6 +1,6 @@
 .PHONY: all fmt link update switch gc
 
-all: fmt link update switch
+all: update fmt switch link
 
 fmt:
 	(fd -e nix -x nixfmt && fd -e nix -x alejandra -q)
@@ -9,6 +9,7 @@ fmt:
 link:
 	(ln -sf ${PWD}/src/darwin-configuration.nix ${HOME}/.nixpkgs/darwin-configuration.nix)
 	(ln -sf ${PWD}/cfg/vsc.jsonc                ${HOME}'/Library/Application Support/Code/User/settings.json')
+	(sudo ./scripts/link-gmp.sh)
 
 update:
 	(nix flake update)
@@ -18,7 +19,6 @@ update:
 
 switch:
 	(nix run nix-darwin -- switch --flake .)
-	(sudo ./scripts/link-gmp.sh)
 
 gc:
 	(sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise)
