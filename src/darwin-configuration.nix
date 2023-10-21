@@ -1,10 +1,9 @@
 {
+  pkgs,
   config,
   lib,
   ...
-}: let
-  pkgs = import <nixpkgs> {config.allowUnfree = true;};
-in ({
+}: ({
     services.nix-daemon.enable = true;
     nix = {
       package = pkgs.nix;
@@ -18,6 +17,11 @@ in ({
           "https://cache.nixos.org"
         ];
       };
+    };
+
+    nixpkgs = {
+      hostPlatform = "x86_64-darwin";
+      config.allowUnfree = true;
     };
 
     environment.variables = {
