@@ -7,8 +7,7 @@ fmt:
 	(deno -q fmt)
 
 link:
-	(ln -sf ${PWD}/src/darwin-configuration.nix ${HOME}/.nixpkgs/darwin-configuration.nix)
-	(ln -sf ${PWD}/cfg/vsc.jsonc                ${HOME}'/Library/Application Support/Code/User/settings.json')
+	(ln -sf ${PWD}/cfg/vsc.jsonc ${HOME}'/Library/Application Support/Code/User/settings.json')
 	(sudo ./scripts/link-gmp.sh)
 
 update:

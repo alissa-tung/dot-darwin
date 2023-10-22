@@ -14,7 +14,9 @@
     formatter."${hostPlatform}" =
       nixpkgs.legacyPackages."${hostPlatform}".alejandra;
 
-    darwinConfigurations."${hostName}" =
-      nix-darwin.lib.darwinSystem {modules = [./darwin-configuration.nix];};
+    darwinConfigurations."${hostName}" = nix-darwin.lib.darwinSystem {
+      modules = [./darwin-configuration.nix];
+      specialArgs = {inherit hostPlatform;};
+    };
   };
 }

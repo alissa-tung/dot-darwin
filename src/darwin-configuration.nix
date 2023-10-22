@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  hostPlatform,
   ...
 }: ({
     services.nix-daemon.enable = true;
@@ -20,7 +21,7 @@
     };
 
     nixpkgs = {
-      hostPlatform = "x86_64-darwin";
+      inherit hostPlatform;
       config.allowUnfree = true;
     };
 
@@ -32,6 +33,7 @@
     environment.systemPackages = with pkgs;
       [
         coreutils
+        gnused
         openssh
         neovim
         git
@@ -49,12 +51,18 @@
         bottom
       ]
       ++ [alejandra nixfmt nil deno yamlfmt taplo ormolu hlint shellcheck]
-      ++ [rustup elan nodejs]
+      ++ [rustup cargo-edit elan nodejs protobuf buf protoc-gen-dart]
       ++ [caddy]
       ++ [gmp libiconv]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
-      ++ lib.lists.singleton (python311.withPackages
-        (pythonPackages: with pythonPackages; [pyyaml loguru]))
+      ++ lib.lists.singleton (python311.withPackages (pythonPackages:
+        with pythonPackages; [
+          pyyaml
+          sphinx
+          sphinx-rtd-theme
+          regex
+          loguru
+        ]))
       ++ lib.lists.singleton (agda.withPackages (agdaPackages:
         with agdaPackages; [
           standard-library

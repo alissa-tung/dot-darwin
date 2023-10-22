@@ -7,6 +7,7 @@
   "editor.renderWhitespace": "boundary",
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "git.openRepositoryInParentFolders": "always",
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Everforest Dark",
   "editor.cursorSmoothCaretAnimation": "on",

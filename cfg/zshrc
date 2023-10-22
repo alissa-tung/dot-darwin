@@ -23,4 +23,4 @@ export PATH="$PATH:$HOME/.ghcup/bin"
 
 export PUB_HOSTED_URL=https://mirrors.cernet.edu.cn/dart-pub
 export FLUTTER_STORAGE_BASE_URL=https://mirrors.cernet.edu.cn/flutter
-export PATH="$PATH:$HOME/.local/share/flutter/bin"
+export PATH="$PATH:$HOME/.local/bin/flutter/bin"
