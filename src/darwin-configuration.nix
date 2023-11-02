@@ -6,6 +6,10 @@
   ...
 }: ({
     services.nix-daemon.enable = true;
+
+    launchd.daemons.nix-daemon.serviceConfig.EnvironmentVariables.https_proxy = "http://127.0.0.1:9520";
+    launchd.daemons.nix-daemon.serviceConfig.EnvironmentVariables.http_proxy = "http://127.0.0.1:9520";
+
     nix = {
       package = pkgs.nix;
 
@@ -51,8 +55,8 @@
         bottom
       ]
       ++ [alejandra nixfmt nil deno yamlfmt taplo ormolu hlint shellcheck]
-      ++ [rustup cargo-edit elan nodejs protobuf buf protoc-gen-dart]
-      ++ [caddy]
+      ++ [rustup cargo-edit elan nodejs_21 protobuf buf protoc-gen-dart]
+      ++ [caddy sqlite]
       ++ [gmp libiconv]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
       ++ lib.lists.singleton (python311.withPackages (pythonPackages:

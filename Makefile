@@ -13,8 +13,6 @@ link:
 update:
 	(nix flake update)
 	(mkdir -p gen/ && ./scripts/vsc-ext.sh > gen/vsc.nix)
-	(sudo nix-channel --update)
-	(nix-channel --update)
 
 switch:
 	(nix run nix-darwin -- switch --flake .)

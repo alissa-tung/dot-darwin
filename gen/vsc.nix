@@ -9,26 +9,26 @@
     {
       name = "dart-code";
       publisher = "dart-code";
-      version = "3.75.20231009";
-      sha256 = "1dznal3j5ybpqpjdvj3rdrg5f7wfi9hl04j56pbs27q8k4k9ljqy";
+      version = "3.77.20231101";
+      sha256 = "1crn2y3i1qrv43hwwslxzi2n1jjgqiy9vvgzk8jrhpf5h9vrcvvi";
     }
     {
       name = "flutter";
       publisher = "dart-code";
-      version = "3.75.20231002";
-      sha256 = "065hjjgyps0cgfaf5n6pb8v2xifrl3ag3przgk8jqnygwr6ifp4x";
+      version = "3.77.20231101";
+      sha256 = "0fp8amsvamfbcxdvkkrnbfjxnn2zqmarnpaypimay1rbr7jlsyjr";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1702";
-      sha256 = "0010z9fmzvbqbnq7951v39607f05m71vnhgs85j12av788whlpqh";
+      version = "0.4.1716";
+      sha256 = "08dscqb8gm1ypvyy04f0byqncmivb91009big0rd91nsfsll4ykq";
     }
     {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.116";
-      sha256 = "1a01wm3l4wr3h7z8gvc8sgwc2z535bda6r2bp1cjr3w9my9c9lw8";
+      version = "0.0.118";
+      sha256 = "1rkaqc3l1id4d8sa4qgwvzvsv99y40ab5p4xdciv38nlgkqh1sqi";
     }
     {
       name = "haskell";
@@ -39,20 +39,20 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2023.19.12931008";
-      sha256 = "0aylrbrh2q84r7qgziv1l7d8g7d2scdpszx9fzn4r0dlvg5kl1b8";
+      version = "2023.21.13051019";
+      sha256 = "0dgsfzavaxzpp2wyx593nvm1mcvw8jfyprms1i0wb58vcrk3g09z";
     }
     {
       name = "pylint";
       publisher = "ms-python";
-      version = "2023.9.12931009";
-      sha256 = "0x2ym6dcjr3rnh5wjzykbcblpbyqkadmqlg64zs25carwnlqfxdz";
+      version = "2023.9.12961008";
+      sha256 = "0fkxdqqbi63qvrcpp2hwiwz78kxbc3my0vygs5yfmbhrk4kbrwh7";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2023.10.41";
-      sha256 = "0487x152qb62npwz8fr7w14xssp0lrb5y4f656lcg9ic5fyajykj";
+      version = "2023.10.53";
+      sha256 = "11viizkxfwfj14ldaikjq3pwlfswkz2a5w6kynxhvzsx6kfnr6mx";
     }
     {
       name = "vscode-yaml";
@@ -69,8 +69,8 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.107.2023100615";
-      sha256 = "1q73mznnq8385d0g0gvn3iq8j16zrin84czz0fzc8w99409mq5x5";
+      version = "0.108.2023110115";
+      sha256 = "1vf0393l41xi0vc5n9hx5ql7apzy9nmnygh08jmiam4yj2780dj1";
     }
     {
       name = "even-better-toml";

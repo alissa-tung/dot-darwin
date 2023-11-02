@@ -18,5 +18,8 @@
   "update.showReleaseNotes": false,
   "rust-analyzer.server.path": "/run/current-system/sw/bin/rust-analyzer",
   "nix.enableLanguageServer": true,
-  "nix.serverPath": "nil"
+  "nix.serverPath": "nil",
+  "evenBetterToml.formatter.reorderKeys": true,
+  "evenBetterToml.formatter.reorderArrays": true,
+  "evenBetterToml.formatter.trailingNewline": true
 }
