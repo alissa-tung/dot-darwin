@@ -12,3 +12,6 @@ banacorn.agda-mode
 ms-vscode-remote.remote-ssh
 tamasfe.even-better-toml
 jnoortheen.nix-ide
+bradlc.vscode-tailwindcss
+ms-vscode.vscode-typescript-next
+HashiCorp.terraform

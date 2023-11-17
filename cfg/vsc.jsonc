@@ -16,7 +16,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "redhat.telemetry.enabled": true,
   "update.showReleaseNotes": false,
-  "rust-analyzer.server.path": "/run/current-system/sw/bin/rust-analyzer",
+  "rust-analyzer.server.path": "rust-analyzer",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nil",
   "evenBetterToml.formatter.reorderKeys": true,

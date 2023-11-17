@@ -53,9 +53,20 @@
         tree
         rlwrap
         bottom
+        du-dust
       ]
       ++ [alejandra nixfmt nil deno yamlfmt taplo ormolu hlint shellcheck]
-      ++ [rustup cargo-edit elan nodejs_21 protobuf buf protoc-gen-dart]
+      ++ [
+        rustup
+        cargo-edit
+        elan
+        nodejs_21
+        protobuf
+        buf
+        protoc-gen-dart
+        go
+        goreleaser
+      ]
       ++ [caddy sqlite]
       ++ [gmp libiconv]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
