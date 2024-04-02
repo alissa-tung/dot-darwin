@@ -1,7 +1,10 @@
 {
   nixpkgs,
   nix-darwin,
-}: rec {
+  extraArgs,
+}: let
+  forester = extraArgs.forester;
+in rec {
   buildOutputs = let
     names = builtins.attrNames (builtins.readDir ./cfg);
   in
@@ -16,7 +19,7 @@
 
     darwinConfigurations."${hostName}" = nix-darwin.lib.darwinSystem {
       modules = [./darwin-configuration.nix];
-      specialArgs = {inherit hostPlatform;};
+      specialArgs = {inherit hostPlatform forester;};
     };
   };
 }

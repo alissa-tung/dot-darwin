@@ -15,3 +15,7 @@ jnoortheen.nix-ide
 bradlc.vscode-tailwindcss
 ms-vscode.vscode-typescript-next
 HashiCorp.terraform
+ocamllabs.ocaml-platform
+bradlc.vscode-tailwindcss
+yoavbls.pretty-ts-errors
+local-smart.excel-live-server

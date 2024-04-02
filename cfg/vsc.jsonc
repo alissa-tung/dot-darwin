@@ -5,6 +5,7 @@
   "editor.fontLigatures": false,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
+  "editor.guides.bracketPairs": true,
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
@@ -21,5 +22,6 @@
   "nix.serverPath": "nil",
   "evenBetterToml.formatter.reorderKeys": true,
   "evenBetterToml.formatter.reorderArrays": true,
-  "evenBetterToml.formatter.trailingNewline": true
+  "evenBetterToml.formatter.trailingNewline": true,
+  "python.analysis.typeCheckingMode": "strict",
 }

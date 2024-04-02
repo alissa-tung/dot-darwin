@@ -3,6 +3,7 @@
   config,
   lib,
   hostPlatform,
+  forester,
   ...
 }: ({
     services.nix-daemon.enable = true;
@@ -18,9 +19,13 @@
 
         substituters = [
           "https://mirrors.bfsu.edu.cn/nix-channels/store/"
-          "https://mirror.sjtu.edu.cn/nix-channels/store"
-          "https://cache.nixos.org"
+          "https://mirror.sjtu.edu.cn/nix-channels/store/"
         ];
+
+        trusted-users = ["root" "alissa"];
+
+        # builders = "ssh-ng://builder@linux-builder x86_64-linux /etc/nix/builder_ed25519 4 - - - AAAAC3NzaC1lZDI1NTE5AAAAII4qvxathhmm1KQn6/Zy3Zd2K3CaqvcfpZr6IBSm6faw";
+        # builders-use-substitutes = true;
       };
     };
 
@@ -46,6 +51,7 @@
         gcc
         clang-tools
         fd
+        ghc
         ripgrep
         jq
         curl
@@ -54,18 +60,22 @@
         rlwrap
         bottom
         du-dust
+        nix-output-monitor
+        cloudflared
+        (octave.withPackages (octavePackages: with octavePackages; [symbolic]))
       ]
-      ++ [alejandra nixfmt nil deno yamlfmt taplo ormolu hlint shellcheck]
+      ++ [alejandra nixfmt nil taplo ormolu hlint shellcheck]
       ++ [
         rustup
         cargo-edit
         elan
-        nodejs_21
         protobuf
         buf
         protoc-gen-dart
         go
         goreleaser
+        millet
+        black
       ]
       ++ [caddy sqlite]
       ++ [gmp libiconv]
@@ -77,13 +87,26 @@
           sphinx-rtd-theme
           regex
           loguru
+          requests
+          beautifulsoup4
+          tkinter
+          pandas
+          duckdb
+          numpy
+          matplotlib
+          ipython
+          sympy
         ]))
       ++ lib.lists.singleton (agda.withPackages (agdaPackages:
         with agdaPackages; [
           standard-library
           cubical
           agda-categories
-        ]));
+        ]))
+      ++ [ocaml ocamlformat dune_3]
+      ++ (with ocamlPackages; [findlib ocaml-lsp])
+      ++ (with pkgs.nodePackages_latest; [nodejs prettier pnpm eslint])
+      ++ lib.lists.singleton forester.packages.${hostPlatform}.default;
 
     programs.zsh = {
       enable = true;

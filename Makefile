@@ -2,9 +2,11 @@
 
 all: update fmt switch link
 
+HOSTNAME := $(shell scutil --get LocalHostName)
+
 fmt:
 	(fd -e nix -x nixfmt && fd -e nix -x alejandra -q)
-	(deno -q fmt)
+	(prettier . -w)
 
 link:
 	(ln -sf ${PWD}/cfg/vsc.jsonc ${HOME}'/Library/Application Support/Code/User/settings.json')
@@ -16,6 +18,9 @@ update:
 
 switch:
 	(nix run nix-darwin -- switch --flake .)
+
+build:
+	(nom build '.#darwinConfigurations.${HOSTNAME}.system')
 
 gc:
 	(sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise)
