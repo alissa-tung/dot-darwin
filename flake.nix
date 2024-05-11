@@ -5,7 +5,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
-      url = "github:LnL7/nix-darwin/master";
+      url = "github:wegank/nix-darwin/mddoc-remove";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -28,12 +28,17 @@
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
       inherit nixpkgs nix-darwin;
-      extraArgs = {inherit forester;};
+      extraArgs = {
+        inherit forester;
+      };
     };
   in
-    (flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {inherit system;};
-    in {packages.smlnj = import ./pkgs/smlnj.nix {inherit pkgs;};}))
-    // builtins.foldl' (acc: x: lib.recursiveUpdate acc x) {}
-    flake-lib.buildOutputs;
+    (flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
+      in {
+        packages.smlnj = import ./pkgs/smlnj.nix {inherit pkgs;};
+      }
+    ))
+    // builtins.foldl' (acc: x: lib.recursiveUpdate acc x) {} flake-lib.buildOutputs;
 }

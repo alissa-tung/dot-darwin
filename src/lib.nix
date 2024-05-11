@@ -14,12 +14,16 @@ in rec {
     hostName,
     hostPlatform,
   }: {
-    formatter."${hostPlatform}" =
-      nixpkgs.legacyPackages."${hostPlatform}".alejandra;
+    formatter."${hostPlatform}" = nixpkgs.legacyPackages."${hostPlatform}".alejandra;
 
     darwinConfigurations."${hostName}" = nix-darwin.lib.darwinSystem {
-      modules = [./darwin-configuration.nix];
-      specialArgs = {inherit hostPlatform forester;};
+      modules = [
+        ./darwin-configuration.nix
+        {nix.registry.nixpkgs.flake = nixpkgs;}
+      ];
+      specialArgs = {
+        inherit hostPlatform forester;
+      };
     };
   };
 }

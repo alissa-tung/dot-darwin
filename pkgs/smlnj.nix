@@ -3,8 +3,14 @@ pkgs.stdenv.mkDerivation {
   pname = "smlnj";
   version = "110.99.4";
 
-  nativeBuildInputs = with pkgs; [xar cpio];
-  buildInputs = with pkgs; [gnused gnugrep];
+  nativeBuildInputs = with pkgs; [
+    xar
+    cpio
+  ];
+  buildInputs = with pkgs; [
+    gnused
+    gnugrep
+  ];
 
   srcs = [
     (pkgs.fetchFromGitHub {
