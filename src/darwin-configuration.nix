@@ -8,10 +8,6 @@
 }: (
   {
     services.nix-daemon.enable = true;
-
-    launchd.daemons.nix-daemon.serviceConfig.EnvironmentVariables.https_proxy = "http://127.0.0.1:9520";
-    launchd.daemons.nix-daemon.serviceConfig.EnvironmentVariables.http_proxy = "http://127.0.0.1:9520";
-
     nix = {
       package = pkgs.nix;
 
@@ -31,9 +27,6 @@
           "root"
           "alissa"
         ];
-
-        # builders = "ssh-ng://builder@linux-builder x86_64-linux /etc/nix/builder_ed25519 4 - - - AAAAC3NzaC1lZDI1NTE5AAAAII4qvxathhmm1KQn6/Zy3Zd2K3CaqvcfpZr6IBSm6faw";
-        # builders-use-substitutes = true;
       };
     };
 
@@ -59,7 +52,6 @@
         gcc
         clang-tools
         fd
-        ghc
         ripgrep
         jq
         curl
@@ -69,16 +61,12 @@
         bottom
         du-dust
         nix-output-monitor
-        cloudflared
-        (octave.withPackages (octavePackages: with octavePackages; [symbolic]))
       ]
       ++ [
         alejandra
         nixfmt-rfc-style
         nil
         taplo
-        ormolu
-        hlint
         shellcheck
       ]
       ++ [
@@ -136,13 +124,13 @@
         )
       )
       ++ [
-        ocaml
-        ocamlformat
-        dune_3
+        # ocaml
+        # ocamlformat
+        # dune_3
       ]
       ++ (with ocamlPackages; [
-        findlib
-        ocaml-lsp
+        # findlib
+        # ocaml-lsp
       ])
       ++ (with pkgs.nodePackages_latest; [
         nodejs
@@ -150,7 +138,17 @@
         pnpm
         eslint
       ])
-      ++ lib.lists.singleton forester.packages.${hostPlatform}.default;
+      # ++ lib.lists.singleton forester.packages.${hostPlatform}.default
+      ++ (with haskellPackages; [cabal-fmt])
+      ++ [
+        llvm_18
+        ormolu
+        hlint
+      ]
+      ++ [
+        idris2
+        idris2Packages.idris2Lsp
+      ];
 
     programs.zsh = {
       enable = true;

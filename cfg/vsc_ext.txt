@@ -1,6 +1,4 @@
 sainnhe.everforest
-dart-code.dart-code
-dart-code.flutter
 rust-lang.rust-analyzer
 leanprover.lean4
 haskell.haskell
@@ -18,4 +16,7 @@ HashiCorp.terraform
 ocamllabs.ocaml-platform
 bradlc.vscode-tailwindcss
 yoavbls.pretty-ts-errors
-local-smart.excel-live-server
+justusadam.language-haskell
+berberman.vscode-cabal-fmt
+million.million-lint
+bamboo.idris2-lsp

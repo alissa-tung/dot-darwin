@@ -24,4 +24,11 @@
   "evenBetterToml.formatter.reorderArrays": true,
   "evenBetterToml.formatter.trailingNewline": true,
   "python.analysis.typeCheckingMode": "strict",
+  "haskell.toolchain": {},
+  "[cabal]": {
+    "editor.defaultFormatter": "berberman.vscode-cabal-fmt",
+  },
+  "[haskell]": {
+    "editor.defaultFormatter": "haskell.haskell",
+  },
 }
