@@ -20,3 +20,6 @@ justusadam.language-haskell
 berberman.vscode-cabal-fmt
 million.million-lint
 bamboo.idris2-lsp
+svelte.svelte-vscode
+llvm-vs-code-extensions.vscode-clangd
+Prisma.prisma

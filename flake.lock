@@ -34,19 +34,34 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1638122382,
+        "narHash": "sha256-sQzZzAbvKEqN9s0bzWuYmRaA03v40gaJ4+iL1LXjaeI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "74f7e4319258e287b0f9cb95426c9853b282730b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "forester": {
       "inputs": {
         "flake-utils": ["flake-utils"],
         "nixpkgs": ["nixpkgs"],
         "opam-nix": "opam-nix",
-        "opam-repository": "opam-repository"
+        "opam-repository": "opam-repository_2"
       },
       "locked": {
-        "lastModified": 1717258627,
-        "narHash": "sha256-US/eWUfKvP7tE8ZQnpiUHp7STCBYkDq85rGTDbffw5s=",
+        "lastModified": 1723459816,
+        "narHash": "sha256-jSiAufSm4Vbdmod3iMh8zRAeu2/9/t89uQunT7aeVyQ=",
         "owner": "~jonsterling",
         "repo": "ocaml-forester",
-        "rev": "9417a56f2c82ece589146746db39f3430de04266",
+        "rev": "bc03e669036603b779cea5b93cb207cbc497caf2",
         "type": "sourcehut"
       },
       "original": {
@@ -76,11 +91,11 @@
         "nixpkgs": ["nixpkgs"]
       },
       "locked": {
-        "lastModified": 1716993688,
-        "narHash": "sha256-vo5k2wQekfeoq/2aleQkBN41dQiQHNTniZeVONWiWLs=",
+        "lastModified": 1722924007,
+        "narHash": "sha256-+CQDamNwqO33REJLft8c26NbUi2Td083hq6SvAm2xkU=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "c0d5b8c54d6828516c97f6be9f2d00c63a363df4",
+        "rev": "91010a5613ffd7ee23ee9263213157a1c422b705",
         "type": "github"
       },
       "original": {
@@ -91,11 +106,27 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1717681334,
-        "narHash": "sha256-HlvsMH8BNgdmQCwbBDmWp5/DfkEQYhXZHagJQCgbJU0=",
+        "lastModified": 1682362401,
+        "narHash": "sha256-/UMUHtF2CyYNl4b60Z2y4wwTTdIWGKhj9H301EDcT9M=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "884ac294018409e0d1adc0cae185439a44bd6b0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1723320709,
+        "narHash": "sha256-DeKCsLQsS58D8TB/cTjXs2x8XMvsyv2JVxcF0Hu6pu8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "31f40991012489e858517ec20102f033e4653afb",
+        "rev": "e1d92cda6fd1bcec60e4938ce92fcee619eea793",
         "type": "github"
       },
       "original": {
@@ -108,11 +139,11 @@
     "opam-nix": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-utils": ["forester", "flake-utils"],
+        "flake-utils": "flake-utils_2",
         "mirage-opam-overlays": "mirage-opam-overlays",
-        "nixpkgs": ["forester", "nixpkgs"],
+        "nixpkgs": "nixpkgs",
         "opam-overlays": "opam-overlays",
-        "opam-repository": ["forester", "opam-repository"],
+        "opam-repository": "opam-repository",
         "opam2json": "opam2json"
       },
       "locked": {
@@ -148,11 +179,27 @@
     "opam-repository": {
       "flake": false,
       "locked": {
-        "lastModified": 1717235387,
-        "narHash": "sha256-C7jrdrhArKeYp+AzA5oLMTAOmv5V7Vq6AsCo/JujV+c=",
+        "lastModified": 1705008664,
+        "narHash": "sha256-TTjTal49QK2U0yVOmw6rJhTGYM7tnj3Kv9DiEEiLt7E=",
         "owner": "ocaml",
         "repo": "opam-repository",
-        "rev": "6c0498c5709e1f827f474353f4f4f8f09ffbf074",
+        "rev": "fa77046c6497f8ca32926acdb7eb1e61777d4c17",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ocaml",
+        "repo": "opam-repository",
+        "type": "github"
+      }
+    },
+    "opam-repository_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721991799,
+        "narHash": "sha256-tCIjnyc0XAXN5WQS239gJw3ZRuY/yqU3rF1/NM24G+M=",
+        "owner": "ocaml",
+        "repo": "opam-repository",
+        "rev": "eceb4d83610133a48b62daa36665ce1292646561",
         "type": "github"
       },
       "original": {
@@ -184,7 +231,7 @@
         "flake-utils": "flake-utils",
         "forester": "forester",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "systems": {

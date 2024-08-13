@@ -31,4 +31,6 @@
   "[haskell]": {
     "editor.defaultFormatter": "haskell.haskell",
   },
+  "files.trimFinalNewlines": true,
+  "svelte.enable-ts-plugin": true,
 }

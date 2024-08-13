@@ -88,6 +88,7 @@
       ++ [
         gmp
         libiconv
+        clang-tools
       ]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
       ++ lib.lists.singleton (
