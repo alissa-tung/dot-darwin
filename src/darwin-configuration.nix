@@ -90,6 +90,7 @@
         libiconv
         clang-tools
       ]
+      ++ [emacs]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
       ++ lib.lists.singleton (
         python311.withPackages (
@@ -147,8 +148,8 @@
         hlint
       ]
       ++ [
-        idris2
-        idris2Packages.idris2Lsp
+        # idris2
+        # idris2Packages.idris2Lsp
       ];
 
     programs.zsh = {
