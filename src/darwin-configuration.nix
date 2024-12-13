@@ -15,12 +15,13 @@
         experimental-features = [
           "nix-command"
           "flakes"
-          "repl-flake"
         ];
 
         substituters = [
           "https://mirrors.bfsu.edu.cn/nix-channels/store/"
           "https://mirror.sjtu.edu.cn/nix-channels/store/"
+          "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
+          "https://mirrors.ustc.edu.cn/nix-channels/store/"
         ];
 
         trusted-users = [
@@ -45,6 +46,7 @@
         coreutils
         gnused
         openssh
+        openssl
         neovim
         git
         gnumake
@@ -61,6 +63,9 @@
         bottom
         du-dust
         nix-output-monitor
+        nix-inspect
+        kitty
+        helix
       ]
       ++ [
         alejandra
@@ -75,10 +80,10 @@
         elan
         protobuf
         buf
-        protoc-gen-dart
+        # protoc-gen-dart
         go
         goreleaser
-        millet
+        # millet
         black
       ]
       ++ [
@@ -86,9 +91,12 @@
         sqlite
       ]
       ++ [
-        gmp
-        libiconv
+        ccache
         clang-tools
+
+        gmp
+        libuv
+        libiconv
       ]
       ++ [emacs]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
@@ -115,25 +123,25 @@
             ]
         )
       )
-      ++ lib.lists.singleton (
-        agda.withPackages (
-          agdaPackages:
-            with agdaPackages; [
-              standard-library
-              cubical
-              agda-categories
-            ]
-        )
-      )
-      ++ [
-        # ocaml
-        # ocamlformat
-        # dune_3
-      ]
-      ++ (with ocamlPackages; [
-        # findlib
-        # ocaml-lsp
-      ])
+      # ++ lib.lists.singleton (
+      #   agda.withPackages (
+      #     agdaPackages:
+      #       with agdaPackages; [
+      #         standard-library
+      #         cubical
+      #         agda-categories
+      #       ]
+      #   )
+      # )
+      # ++ [
+      #   ocaml
+      #   ocamlformat
+      #   dune_3
+      # ]
+      # ++ (with ocamlPackages; [
+      #   findlib
+      #   ocaml-lsp
+      # ])
       ++ (with pkgs.nodePackages_latest; [
         nodejs
         prettier

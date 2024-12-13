@@ -4,6 +4,9 @@ set -eu -o pipefail
 
 # https://raw.githubusercontent.com/NixOS/nixpkgs/master/pkgs/applications/editors/vscode/extensions/update_installed_exts.sh
 
+TMPDIR="./tmp-for-vsc"
+mkdir -p "$TMPDIR"
+
 # Helper to just fail with a message and non-zero exit code.
 function fail() {
     echo "$1" >&2

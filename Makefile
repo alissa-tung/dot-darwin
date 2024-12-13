@@ -5,7 +5,7 @@ all: update fmt switch link
 HOSTNAME := $(shell scutil --get LocalHostName)
 
 fmt:
-	(fd -e nix -x nixfmt && fd -e nix -x alejandra -q)
+	(fd -e nix -X nixfmt && fd -e nix -X alejandra -q)
 	(prettier . -w)
 
 link:
@@ -15,6 +15,7 @@ link:
 update:
 	(nix flake update)
 	(mkdir -p gen/ && ./scripts/vsc-ext.sh > gen/vsc.nix)
+	(rm -rf ./tmp-for-vsc)
 
 switch:
 	(nix run nix-darwin -- switch --flake .)

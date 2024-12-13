@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
@@ -24,6 +23,7 @@
     flake-utils,
     nix-darwin,
     forester,
+    ...
   }: let
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
@@ -35,9 +35,8 @@
   in
     (flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = import nixpkgs {inherit system;};
+        pkgs = nixpkgs.legacyPackages.${system};
       in {
-        packages.smlnj = import ./pkgs/smlnj.nix {inherit pkgs;};
       }
     ))
     // builtins.foldl' (acc: x: lib.recursiveUpdate acc x) {} flake-lib.buildOutputs;
