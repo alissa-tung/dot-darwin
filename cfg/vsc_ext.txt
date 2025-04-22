@@ -16,3 +16,10 @@ svelte.svelte-vscode
 llvm-vs-code-extensions.vscode-clangd
 Prisma.prisma
 bufbuild.vscode-buf
+berberman.vscode-cabal-fmt
+justusadam.language-haskell
+dramforever.vscode-ghc-simple
+haskell.haskell
+Catppuccin.catppuccin-vsc-pack
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons

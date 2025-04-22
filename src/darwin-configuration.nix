@@ -7,7 +7,11 @@
   ...
 }: (
   {
-    services.nix-daemon.enable = true;
+    fonts.packages = [
+      pkgs.ibm-plex
+      pkgs.texlivePackages.fandol
+    ];
+
     nix = {
       package = pkgs.nix;
 
@@ -19,7 +23,7 @@
 
         substituters = [
           "https://mirrors.bfsu.edu.cn/nix-channels/store/"
-          "https://mirror.sjtu.edu.cn/nix-channels/store/"
+          # "https://mirror.sjtu.edu.cn/nix-channels/store/"
           "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
           "https://mirrors.ustc.edu.cn/nix-channels/store/"
         ];
@@ -37,7 +41,7 @@
     };
 
     environment.variables = {
-      EDITOR = "nvim";
+      EDITOR = "hx";
       LANG = "en_US.UTF-8";
     };
 
@@ -47,11 +51,11 @@
         gnused
         openssh
         openssl
-        neovim
         git
         gnumake
         cmake
         gcc
+        clang
         clang-tools
         fd
         ripgrep
@@ -62,6 +66,7 @@
         rlwrap
         bottom
         du-dust
+        delta
         nix-output-monitor
         nix-inspect
         kitty
@@ -92,34 +97,32 @@
       ]
       ++ [
         ccache
-        clang-tools
 
         gmp
         libuv
         libiconv
       ]
-      ++ [emacs]
       ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
       ++ lib.lists.singleton (
         python311.withPackages (
           pythonPackages:
             with pythonPackages; [
-              chardet
-              pyyaml
-              sphinx
-              sphinx-rtd-theme
-              regex
-              loguru
-              requests
-              beautifulsoup4
-              tkinter
-              pandas
-              duckdb
-              numpy
-              matplotlib
-              ipython
-              sympy
-              pyserial
+              # chardet
+              # pyyaml
+              # sphinx
+              # sphinx-rtd-theme
+              # regex
+              # loguru
+              # requests
+              # beautifulsoup4
+              # tkinter
+              # pandas
+              # duckdb
+              # numpy
+              # matplotlib
+              # ipython
+              # sympy
+              # pyserial
             ]
         )
       )
@@ -158,6 +161,10 @@
       ++ [
         # idris2
         # idris2Packages.idris2Lsp
+      ]
+      ++ [
+        tinymist
+        typst
       ];
 
     programs.zsh = {

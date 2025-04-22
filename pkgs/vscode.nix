@@ -3,6 +3,7 @@ pkgs.vscode-with-extensions.override {
   vscodeExtensions = with pkgs.vscode-extensions;
     [
       # azdavis.millet
+      myriad-dreamin.tinymist
       jnoortheen.nix-ide
     ]
     ++ map (
