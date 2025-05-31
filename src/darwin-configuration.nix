@@ -47,7 +47,9 @@
 
     environment.systemPackages = with pkgs;
       [
+        zsh
         coreutils
+        findutils
         gnused
         openssh
         openssl
@@ -71,6 +73,10 @@
         nix-inspect
         kitty
         helix
+        uv
+        ruff
+        idris2
+        pandoc
       ]
       ++ [
         alejandra
@@ -107,6 +113,7 @@
         python311.withPackages (
           pythonPackages:
             with pythonPackages; [
+              # uv
               # chardet
               # pyyaml
               # sphinx

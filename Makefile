@@ -18,7 +18,7 @@ update:
 	(rm -rf ./tmp-for-vsc)
 
 switch:
-	(nix run nix-darwin -- switch --flake .)
+	(sudo darwin-rebuild switch --flake .)
 
 build:
 	(nom build '.#darwinConfigurations.${HOSTNAME}.system')

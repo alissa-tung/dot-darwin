@@ -9,44 +9,26 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2434";
-      sha256 = "195lsh04ylyykss0gs2vvz6c3izm21j1rfbkyxppz08v1mqx6ppr";
+      version = "0.4.2479";
+      sha256 = "0sbbbs2x8878y2kvlpcrcv44qmv6nspi6nhwm7nw2f9814fdrzxi";
     }
     {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.203";
-      sha256 = "0l0jl94gmrhqm0k6zsw5ghx6g62wmfbhvfk7sfs7lihkbvifc3qh";
-    }
-    {
-      name = "python";
-      publisher = "ms-python";
-      version = "2025.5.2025042201";
-      sha256 = "05jkyc4xyyn8q9ff2m3krfq42i4is35s6ymxvghmhpqmw6a6yq39";
-    }
-    {
-      name = "pylint";
-      publisher = "ms-python";
-      version = "2025.3.10971010";
-      sha256 = "0vdvrhra0j0r4rv3gd8w5hfbdc5xd3fpk542l2b289f99g050gnf";
-    }
-    {
-      name = "vscode-pylance";
-      publisher = "ms-python";
-      version = "2025.4.100";
-      sha256 = "0sw2mknnwx320249lpgy0ncm4hi1bh7zxsi687c3bqkbba2mfd2y";
+      version = "0.0.205";
+      sha256 = "05f7zw1grjz5rx28qknp318ibby0m1bwssn32g2pcpj711viljnz";
     }
     {
       name = "vscode-yaml";
       publisher = "redhat";
-      version = "1.17.0";
-      sha256 = "0zgiyzh1imv6jydvwv4p1l6xz9mlg4cayryi691ky2bj9qp2cyxv";
+      version = "1.18.0";
+      sha256 = "15lrwjw72gxkqcfnw32j0w0wgbl435zg523fi6k6llciafk47p2j";
     }
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.120.2025040915";
-      sha256 = "0zpgk1nf40750b1z8idsj1449xrl6qahshwfy3wpw53a9f4w2vjx";
+      version = "0.121.2025053015";
+      sha256 = "18qhhn5c2bpi02ixin56vb8yg5vyf15kva2zjlnn9gdkhf3z4aqb";
     }
     {
       name = "even-better-toml";
@@ -57,20 +39,20 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.15";
-      sha256 = "114xqfb8pmjp627dsm9q63blpwgcpawbdccls9b7y7f14l1qz4h4";
+      version = "0.14.20";
+      sha256 = "0ghjd7mgj03w38c8fbc9ldxgjc0zjzn08dld629gpj1a83nni3j3";
     }
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "5.9.20250330";
-      sha256 = "199g2wak4c6c2gihlnrn5glgrv3xzabymvszm1hx7k02q3idmj2z";
+      version = "5.9.20250530";
+      sha256 = "0bvpwnk15d2s5s9plj6bhcqpwxb6p1fkgi8qjfnl15mkwyr0bxkq";
     }
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.15";
-      sha256 = "114xqfb8pmjp627dsm9q63blpwgcpawbdccls9b7y7f14l1qz4h4";
+      version = "0.14.20";
+      sha256 = "0ghjd7mgj03w38c8fbc9ldxgjc0zjzn08dld629gpj1a83nni3j3";
     }
     {
       name = "pretty-ts-errors";
@@ -87,26 +69,26 @@
     {
       name = "svelte-vscode";
       publisher = "svelte";
-      version = "109.5.4";
-      sha256 = "07s6ass4v84ky11s9plvn409dwc0qka7v0a6qak2194j09fz1638";
+      version = "109.8.1";
+      sha256 = "02h4ikrhp1a055i68d4b5b3siprx0z4algkmaclhr7nb1rh7pdi0";
     }
     {
       name = "vscode-clangd";
       publisher = "llvm-vs-code-extensions";
-      version = "0.1.34";
-      sha256 = "0w7kvn8lpzvwkdxbhkgw9m6m5qy61i27a8r5xnv5cdf7gndpc9va";
+      version = "0.1.35";
+      sha256 = "1fn3m217m2p13qvshzvxjdjddga1g1k95j8ba41jqnf4d2cr2piv";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "6.6.0";
-      sha256 = "1xvjc2adi5ppc5k99h51gb2b3qb9l1y6wcfm5gv657gfhkicjppf";
+      version = "6.8.2";
+      sha256 = "0lrrws1nyccgz8gialpnikb90gbsvdsagf3zxxvxs8chlj1yv2lf";
     }
     {
       name = "vscode-buf";
       publisher = "bufbuild";
-      version = "0.7.0";
-      sha256 = "0bjsfzmdlxh8za8ncps9n3s1n8169c7p3i9m64lsdigpwxrwd7q7";
+      version = "0.7.2";
+      sha256 = "1mgir10angkn7lkrb3b76dp3xd0skpyb7rw77656w5j1jpk4snna";
     }
     {
       name = "vscode-cabal-fmt";
@@ -147,8 +129,8 @@
     {
       name = "catppuccin-vsc-icons";
       publisher = "catppuccin";
-      version = "1.20.0";
-      sha256 = "0v69n8nhn9ay96aq9xz41cf06rgwcp5q5g8fpi0h5cvggvjiljlf";
+      version = "1.21.0";
+      sha256 = "1f7mv0cwdc8xv98mi6w2wv1jasqa9d1x3ky4ifj75wn9slkk2qdd";
     }
   ];
 }

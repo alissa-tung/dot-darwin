@@ -5,6 +5,10 @@ pkgs.vscode-with-extensions.override {
       # azdavis.millet
       myriad-dreamin.tinymist
       jnoortheen.nix-ide
+      ms-python.python
+      ms-python.pylint
+      ms-pyright.pyright
+      charliermarsh.ruff
     ]
     ++ map (
       extension:

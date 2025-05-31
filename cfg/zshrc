@@ -8,16 +8,7 @@ function nix_shell_prompt () {
   fi
 }
 
-function python_venv_prompt () {
-  if [[ -z "${VIRTUAL_ENV}" ]]; then
-    REPLY=""
-  else
-    REPLY="venv: $(pwd | awk -F/ '{ if (NF > 4) { print ".../" $(NF-2) "/" $(NF-1) "/" $NF } else { print $0 } }')> "
-  fi
-}
-
 grml_theme_add_token in-nix-shell -f nix_shell_prompt '%F{cyan}' '%f'
-grml_theme_add_token in-python-venv -f python_venv_prompt '%F{cyan}' '%f'
 
 zstyle ':prompt:grml:left:setup' items rc change-root user at host in-nix-shell path vcs newline percent
 
@@ -35,3 +26,4 @@ export FLUTTER_STORAGE_BASE_URL=https://mirrors.cernet.edu.cn/flutter
 export PATH="$PATH:$HOME/.local/bin/flutter/bin"
 
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+export UV_PYTHON=/run/current-system/sw/bin/python

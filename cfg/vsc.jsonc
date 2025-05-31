@@ -40,4 +40,13 @@
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   },
   "workbench.iconTheme": "catppuccin-frappe",
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "python.analysis.typeEvaluation.strictDictionaryInference": true,
+  "python.analysis.typeEvaluation.strictListInference": true,
+  "python.analysis.typeEvaluation.strictSetInference": true,
+  "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
+  "python.analysis.languageServerMode": "full",
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "/Users/alissa/pod/search-labs/.venv",
 }

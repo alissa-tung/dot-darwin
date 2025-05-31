@@ -1,9 +1,6 @@
 sainnhe.everforest
 rust-lang.rust-analyzer
 leanprover.lean4
-ms-python.python
-ms-python.pylint
-ms-python.vscode-pylance
 redhat.vscode-yaml
 ms-vscode-remote.remote-ssh
 tamasfe.even-better-toml
