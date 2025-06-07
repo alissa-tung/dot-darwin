@@ -9,14 +9,14 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2479";
-      sha256 = "0sbbbs2x8878y2kvlpcrcv44qmv6nspi6nhwm7nw2f9814fdrzxi";
+      version = "0.4.2487";
+      sha256 = "0g0i3qxkls2b93pmiw55j8g7313jlpxy3lj8baibam5z55riz9ra";
     }
     {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.205";
-      sha256 = "05f7zw1grjz5rx28qknp318ibby0m1bwssn32g2pcpj711viljnz";
+      version = "0.0.207";
+      sha256 = "17vcqxss1i8fkh3dghbqpjq9qn4lp9n4n7dri82nvc73v8frh923";
     }
     {
       name = "vscode-yaml";
@@ -39,20 +39,20 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.20";
-      sha256 = "0ghjd7mgj03w38c8fbc9ldxgjc0zjzn08dld629gpj1a83nni3j3";
+      version = "0.14.21";
+      sha256 = "1y57dpqvyrzjcbqqfhkgr5v6wgcns1q3dbx93v6fnrjm112385sd";
     }
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "5.9.20250530";
-      sha256 = "0bvpwnk15d2s5s9plj6bhcqpwxb6p1fkgi8qjfnl15mkwyr0bxkq";
+      version = "5.9.20250606";
+      sha256 = "1d4cm9m49x0s40h1483vkn3wh6fkz41j9h3fxc3zyxpigsxcnk47";
     }
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.20";
-      sha256 = "0ghjd7mgj03w38c8fbc9ldxgjc0zjzn08dld629gpj1a83nni3j3";
+      version = "0.14.21";
+      sha256 = "1y57dpqvyrzjcbqqfhkgr5v6wgcns1q3dbx93v6fnrjm112385sd";
     }
     {
       name = "pretty-ts-errors";
@@ -81,8 +81,8 @@
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "6.8.2";
-      sha256 = "0lrrws1nyccgz8gialpnikb90gbsvdsagf3zxxvxs8chlj1yv2lf";
+      version = "6.9.0";
+      sha256 = "19zxbn5ls2pcn9z39b81mqzkfzp1yzdb5l9cjc5nddiz1cyqcyf5";
     }
     {
       name = "vscode-buf";

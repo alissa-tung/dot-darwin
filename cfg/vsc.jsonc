@@ -48,5 +48,4 @@
   "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
   "python.analysis.languageServerMode": "full",
   "python.languageServer": "Pylance",
-  "python.defaultInterpreterPath": "/Users/alissa/pod/search-labs/.venv",
 }

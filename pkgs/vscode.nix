@@ -9,6 +9,7 @@ pkgs.vscode-with-extensions.override {
       ms-python.pylint
       ms-pyright.pyright
       charliermarsh.ruff
+      james-yu.latex-workshop
     ]
     ++ map (
       extension:

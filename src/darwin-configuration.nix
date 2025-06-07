@@ -77,6 +77,7 @@
         ruff
         idris2
         pandoc
+        texliveFull
       ]
       ++ [
         alejandra
@@ -133,16 +134,17 @@
             ]
         )
       )
-      # ++ lib.lists.singleton (
-      #   agda.withPackages (
-      #     agdaPackages:
-      #       with agdaPackages; [
-      #         standard-library
-      #         cubical
-      #         agda-categories
-      #       ]
-      #   )
-      # )
+      ++ [
+        # haskellPackages.agda-language-server
+        (agda.withPackages (
+          agdaPackages:
+            with agdaPackages; [
+              standard-library
+              cubical
+              agda-categories
+            ]
+        ))
+      ]
       # ++ [
       #   ocaml
       #   ocamlformat
