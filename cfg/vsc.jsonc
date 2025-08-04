@@ -48,4 +48,9 @@
   "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
   "python.analysis.languageServerMode": "full",
   "python.languageServer": "Pylance",
+  "files.associations": {
+    "*.css": "tailwindcss",
+  },
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showMoves": true,
 }

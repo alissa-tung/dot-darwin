@@ -9,14 +9,14 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2487";
-      sha256 = "0g0i3qxkls2b93pmiw55j8g7313jlpxy3lj8baibam5z55riz9ra";
+      version = "0.4.2562";
+      sha256 = "0zw0q9a2wh6c0yyxyy6in249r56avv6q70cylvl9z4aalici2ka2";
     }
     {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.207";
-      sha256 = "17vcqxss1i8fkh3dghbqpjq9qn4lp9n4n7dri82nvc73v8frh923";
+      version = "0.0.209";
+      sha256 = "14li31q0dc7yp58w2piigwkz8zyacmc578frbi5c6s66wh8x6ixa";
     }
     {
       name = "vscode-yaml";
@@ -27,8 +27,8 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.121.2025053015";
-      sha256 = "18qhhn5c2bpi02ixin56vb8yg5vyf15kva2zjlnn9gdkhf3z4aqb";
+      version = "0.121.2025073115";
+      sha256 = "0n8in0qiicnjxvp95gdk0f3syx3bpydcl7spzjy78wqyqk68f3kc";
     }
     {
       name = "even-better-toml";
@@ -39,20 +39,20 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.21";
-      sha256 = "1y57dpqvyrzjcbqqfhkgr5v6wgcns1q3dbx93v6fnrjm112385sd";
+      version = "0.14.26";
+      sha256 = "1f6ijdarhan9p0gs1sk2fiy71hjv7zn5myr1pq98008brdyfs2ba";
     }
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "5.9.20250606";
-      sha256 = "1d4cm9m49x0s40h1483vkn3wh6fkz41j9h3fxc3zyxpigsxcnk47";
+      version = "6.0.20250803";
+      sha256 = "1n7n9h15apn2j9vvxdhk17cr5y5rc334nqb2rqa49psig5apbfd1";
     }
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.21";
-      sha256 = "1y57dpqvyrzjcbqqfhkgr5v6wgcns1q3dbx93v6fnrjm112385sd";
+      version = "0.14.26";
+      sha256 = "1f6ijdarhan9p0gs1sk2fiy71hjv7zn5myr1pq98008brdyfs2ba";
     }
     {
       name = "pretty-ts-errors";
@@ -69,20 +69,20 @@
     {
       name = "svelte-vscode";
       publisher = "svelte";
-      version = "109.8.1";
-      sha256 = "02h4ikrhp1a055i68d4b5b3siprx0z4algkmaclhr7nb1rh7pdi0";
+      version = "109.10.1";
+      sha256 = "1qcnsycyzd1260dsky5s33pi2rs9jxxpwk9f5fbc226km64kwi4y";
     }
     {
       name = "vscode-clangd";
       publisher = "llvm-vs-code-extensions";
-      version = "0.1.35";
-      sha256 = "1fn3m217m2p13qvshzvxjdjddga1g1k95j8ba41jqnf4d2cr2piv";
+      version = "0.2.0";
+      sha256 = "09az6vx3z4yhcf3ygcl1cxyflngc7ig2wcyjncs93dnaw2xjz5r3";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "6.9.0";
-      sha256 = "19zxbn5ls2pcn9z39b81mqzkfzp1yzdb5l9cjc5nddiz1cyqcyf5";
+      version = "6.13.0";
+      sha256 = "1v3wmf61sb36b8xqrknkr2szjc5i20999z8wvg98gzviljabc7xb";
     }
     {
       name = "vscode-buf";
@@ -111,8 +111,8 @@
     {
       name = "haskell";
       publisher = "haskell";
-      version = "2.6.0";
-      sha256 = "0bgqkgc0c88g9wj68n9kzyq8qpfaf12l55hcgwd0lh3y4vpwcnys";
+      version = "2.7.0";
+      sha256 = "0dgz9bvmriqii7ixgx850jwly4z4qvvi39s0f500vbx21pq30i5f";
     }
     {
       name = "catppuccin-vsc-pack";
@@ -129,8 +129,14 @@
     {
       name = "catppuccin-vsc-icons";
       publisher = "catppuccin";
-      version = "1.21.0";
-      sha256 = "1f7mv0cwdc8xv98mi6w2wv1jasqa9d1x3ky4ifj75wn9slkk2qdd";
+      version = "1.23.0";
+      sha256 = "0ddj3q0njbspgkpmscr49gfyzsw0lgasx3hqigd5qjv8vgmzaycf";
+    }
+    {
+      name = "idris2-lsp";
+      publisher = "bamboo";
+      version = "0.7.1";
+      sha256 = "1ygfih9m5pr7zjdpg32xb6zssdf49ihr18f62qazjfqy84750yhx";
     }
   ];
 }

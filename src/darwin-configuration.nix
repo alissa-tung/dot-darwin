@@ -75,7 +75,6 @@
         helix
         uv
         ruff
-        idris2
         pandoc
         texliveFull
       ]
@@ -168,8 +167,8 @@
         hlint
       ]
       ++ [
-        # idris2
-        # idris2Packages.idris2Lsp
+        idris2
+        idris2Packages.idris2Lsp
       ]
       ++ [
         tinymist
