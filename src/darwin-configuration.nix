@@ -54,6 +54,7 @@
         openssh
         openssl
         git
+        gh
         gnumake
         cmake
         gcc

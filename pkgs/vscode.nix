@@ -10,6 +10,7 @@ pkgs.vscode-with-extensions.override {
       ms-pyright.pyright
       charliermarsh.ruff
       james-yu.latex-workshop
+      matthewpi.caddyfile-support
     ]
     ++ map (
       extension:

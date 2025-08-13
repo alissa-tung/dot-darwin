@@ -9,8 +9,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2562";
-      sha256 = "0zw0q9a2wh6c0yyxyy6in249r56avv6q70cylvl9z4aalici2ka2";
+      version = "0.4.2579";
+      sha256 = "03ha72a5mv9j20c1wch404vxlsmzmvgkzj6v2yqzpwnv2aa7f5h8";
     }
     {
       name = "lean4";
@@ -27,8 +27,8 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.121.2025073115";
-      sha256 = "0n8in0qiicnjxvp95gdk0f3syx3bpydcl7spzjy78wqyqk68f3kc";
+      version = "0.121.2025081315";
+      sha256 = "0yxgymq8xw4y7vy88p3125dyjmpbv9330p75i3w84y566r01g5vf";
     }
     {
       name = "even-better-toml";
@@ -45,8 +45,8 @@
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "6.0.20250803";
-      sha256 = "1n7n9h15apn2j9vvxdhk17cr5y5rc334nqb2rqa49psig5apbfd1";
+      version = "6.0.20250812";
+      sha256 = "0bcq02pns3kyj44bpg76hpxb04p7n2yk1q34jplyjlysqdflfm3m";
     }
     {
       name = "vscode-tailwindcss";
@@ -69,8 +69,8 @@
     {
       name = "svelte-vscode";
       publisher = "svelte";
-      version = "109.10.1";
-      sha256 = "1qcnsycyzd1260dsky5s33pi2rs9jxxpwk9f5fbc226km64kwi4y";
+      version = "109.11.0";
+      sha256 = "0vcbn6z37zad8q63jr9zv01d0fww63br5cn7rsg3qc3i8imj8h4k";
     }
     {
       name = "vscode-clangd";
@@ -81,8 +81,8 @@
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "6.13.0";
-      sha256 = "1v3wmf61sb36b8xqrknkr2szjc5i20999z8wvg98gzviljabc7xb";
+      version = "6.14.0";
+      sha256 = "06cl3r4ahzqx90c1haqlqxx832a5dd5wfbahdign3rd7h8ym5l2m";
     }
     {
       name = "vscode-buf";
@@ -137,6 +137,24 @@
       publisher = "bamboo";
       version = "0.7.1";
       sha256 = "1ygfih9m5pr7zjdpg32xb6zssdf49ihr18f62qazjfqy84750yhx";
+    }
+    {
+      name = "Go";
+      publisher = "golang";
+      version = "0.49.0";
+      sha256 = "0chwsaasw445pn6qf6786al3snn4l39mpb5iyzyrxlxgvm6s3mph";
+    }
+    {
+      name = "basedpyright";
+      publisher = "detachhead";
+      version = "1.31.2";
+      sha256 = "149dg58fyyklvdv9d4i02l63bspy0wad69wizh8mnyivw9xiv8js";
+    }
+    {
+      name = "ty";
+      publisher = "astral-sh";
+      version = "2025.33.12181219";
+      sha256 = "00zs1ybankrxjn9q6xnvzqgn7wwmp2hsms7y5qjq2y8w6620ijai";
     }
   ];
 }

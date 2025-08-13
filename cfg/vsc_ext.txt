@@ -21,3 +21,6 @@ Catppuccin.catppuccin-vsc-pack
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
 bamboo.idris2-lsp
+golang.Go
+detachhead.basedpyright
+astral-sh.ty

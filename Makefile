@@ -18,10 +18,11 @@ update:
 	(rm -rf ./tmp-for-vsc)
 
 switch:
+	(rm -rf '/Applications/Nix Apps')
 	(sudo darwin-rebuild switch --flake .)
 
 build:
 	(nom build '.#darwinConfigurations.${HOSTNAME}.system')
 
 gc:
-	(sudo nix-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise)
+	(sudo nix-collect-garbage -d && sudo nix store gc && sudo nix store optimise)
