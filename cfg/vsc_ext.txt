@@ -1,5 +1,4 @@
 sainnhe.everforest
-rust-lang.rust-analyzer
 leanprover.lean4
 redhat.vscode-yaml
 ms-vscode-remote.remote-ssh
@@ -23,4 +22,3 @@ catppuccin.catppuccin-vsc-icons
 bamboo.idris2-lsp
 golang.Go
 detachhead.basedpyright
-astral-sh.ty

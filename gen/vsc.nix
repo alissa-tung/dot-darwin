@@ -7,16 +7,10 @@
       sha256 = "1dbkk2nys97a825kvrmjh6qgjzfricllwjwh9qcsvmycbg6sp64x";
     }
     {
-      name = "rust-analyzer";
-      publisher = "rust-lang";
-      version = "0.4.2579";
-      sha256 = "03ha72a5mv9j20c1wch404vxlsmzmvgkzj6v2yqzpwnv2aa7f5h8";
-    }
-    {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.209";
-      sha256 = "14li31q0dc7yp58w2piigwkz8zyacmc578frbi5c6s66wh8x6ixa";
+      version = "0.0.211";
+      sha256 = "13nss9v84570fb8mb2z5zzphrzfdzm8gxxszgbgnfcri6c6y5306";
     }
     {
       name = "vscode-yaml";
@@ -27,8 +21,8 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.121.2025081315";
-      sha256 = "0yxgymq8xw4y7vy88p3125dyjmpbv9330p75i3w84y566r01g5vf";
+      version = "0.121.2025081515";
+      sha256 = "0r1v78381b5ayh51w6k6bfn9mrb7x8vpniy1csimc204kq11b30b";
     }
     {
       name = "even-better-toml";
@@ -45,8 +39,8 @@
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "6.0.20250812";
-      sha256 = "0bcq02pns3kyj44bpg76hpxb04p7n2yk1q34jplyjlysqdflfm3m";
+      version = "6.0.20250821";
+      sha256 = "1w93h47fryvmbwz8cgijn52gm634akwnjspmmqhf5sd8gl87fnm5";
     }
     {
       name = "vscode-tailwindcss";
@@ -87,8 +81,8 @@
     {
       name = "vscode-buf";
       publisher = "bufbuild";
-      version = "0.7.2";
-      sha256 = "1mgir10angkn7lkrb3b76dp3xd0skpyb7rw77656w5j1jpk4snna";
+      version = "0.8.0";
+      sha256 = "0mn4ggkm3wg5hbm240v5j7v3wj4jqyriba4xjsvwfrm78g7dznbn";
     }
     {
       name = "vscode-cabal-fmt";
@@ -129,8 +123,8 @@
     {
       name = "catppuccin-vsc-icons";
       publisher = "catppuccin";
-      version = "1.23.0";
-      sha256 = "0ddj3q0njbspgkpmscr49gfyzsw0lgasx3hqigd5qjv8vgmzaycf";
+      version = "1.24.0";
+      sha256 = "0yfx6h02ri059b1f7yliba5v9a4bhw8ymdv168d51x1h4zhcvknq";
     }
     {
       name = "idris2-lsp";
@@ -141,20 +135,14 @@
     {
       name = "Go";
       publisher = "golang";
-      version = "0.49.0";
-      sha256 = "0chwsaasw445pn6qf6786al3snn4l39mpb5iyzyrxlxgvm6s3mph";
+      version = "0.49.1";
+      sha256 = "0ay30zbq1j5a455sg6i08hmh044xqldf42xjlxkvc9zckxl1q5xx";
     }
     {
       name = "basedpyright";
       publisher = "detachhead";
-      version = "1.31.2";
-      sha256 = "149dg58fyyklvdv9d4i02l63bspy0wad69wizh8mnyivw9xiv8js";
-    }
-    {
-      name = "ty";
-      publisher = "astral-sh";
-      version = "2025.33.12181219";
-      sha256 = "00zs1ybankrxjn9q6xnvzqgn7wwmp2hsms7y5qjq2y8w6620ijai";
+      version = "1.31.3";
+      sha256 = "1136izjwl434y9fdim0hvvaypxk2hpwva0mrz5n6jgjhcyy9f3f5";
     }
   ];
 }

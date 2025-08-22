@@ -21,4 +21,4 @@ export PATH="$PATH:$HOME/.ghcup/bin"
 export PATH="$PATH:$HOME/.local/bin/flutter/bin"
 
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-export UV_PYTHON=/run/current-system/sw/bin/python
+export UV_PYTHON=${UV_PYTHON:-/run/current-system/sw/bin/python}

@@ -2,7 +2,6 @@
 pkgs.vscode-with-extensions.override {
   vscodeExtensions = with pkgs.vscode-extensions;
     [
-      # azdavis.millet
       myriad-dreamin.tinymist
       jnoortheen.nix-ide
       ms-python.python
@@ -11,6 +10,7 @@ pkgs.vscode-with-extensions.override {
       charliermarsh.ruff
       james-yu.latex-workshop
       matthewpi.caddyfile-support
+      rust-lang.rust-analyzer
     ]
     ++ map (
       extension:

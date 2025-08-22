@@ -18,7 +18,6 @@ update:
 	(rm -rf ./tmp-for-vsc)
 
 switch:
-	(rm -rf '/Applications/Nix Apps')
 	(sudo darwin-rebuild switch --flake .)
 
 build:
