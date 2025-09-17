@@ -7,14 +7,6 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    forester = {
-      url = "sourcehut:~jonsterling/ocaml-forester";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
-    };
   };
 
   outputs = {
@@ -22,15 +14,11 @@
     nixpkgs,
     flake-utils,
     nix-darwin,
-    forester,
     ...
   }: let
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
       inherit nixpkgs nix-darwin;
-      extraArgs = {
-        inherit forester;
-      };
     };
   in
     (flake-utils.lib.eachDefaultSystem (

@@ -1,10 +1,7 @@
 {
   nixpkgs,
   nix-darwin,
-  extraArgs,
-}: let
-  forester = extraArgs.forester;
-in rec {
+}: rec {
   buildOutputs = let
     names = builtins.attrNames (builtins.readDir ./cfg);
   in
@@ -22,7 +19,7 @@ in rec {
         {nix.registry.nixpkgs.flake = nixpkgs;}
       ];
       specialArgs = {
-        inherit hostPlatform forester;
+        inherit hostPlatform;
       };
     };
   };

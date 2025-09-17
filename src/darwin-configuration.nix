@@ -3,7 +3,6 @@
   config,
   lib,
   hostPlatform,
-  forester,
   ...
 }: (
   {
@@ -72,7 +71,6 @@
         delta
         nix-output-monitor
         nix-inspect
-        kitty
         helix
         uv
         ruff
@@ -160,7 +158,6 @@
         pnpm
         eslint
       ])
-      # ++ lib.lists.singleton forester.packages.${hostPlatform}.default
       ++ (with haskellPackages; [cabal-fmt])
       ++ [
         llvm_18
