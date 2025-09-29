@@ -76,6 +76,13 @@
         ruff
         pandoc
         texliveFull
+
+        scala
+        scala-cli
+        metals
+        scalafmt
+        scalafix
+        sbt
       ]
       ++ [
         alejandra

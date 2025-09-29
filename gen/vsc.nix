@@ -9,14 +9,14 @@
     {
       name = "lean4";
       publisher = "leanprover";
-      version = "0.0.212";
-      sha256 = "11lzdj8w3f79dbchs9d10w04j3615x1mvgbq60qm3sh4zbqfyjmp";
+      version = "0.0.214";
+      sha256 = "03v7kp5qna4j399s0xi00wdxzgqaq6az0ix7rrsfrmp3fl9ac97b";
     }
     {
       name = "vscode-yaml";
       publisher = "redhat";
-      version = "1.18.0";
-      sha256 = "15lrwjw72gxkqcfnw32j0w0wgbl435zg523fi6k6llciafk47p2j";
+      version = "1.19.0";
+      sha256 = "1fyhamvnjq2qfyp0y9mx7wsy4gj1i509387csmxlmrk1qs8ybkrm";
     }
     {
       name = "remote-ssh";
@@ -39,8 +39,8 @@
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "6.0.20250916";
-      sha256 = "1l1fk8zrvnizpl0inv8aizmdc1xchkzpsvisabln9qvs2g72mzl4";
+      version = "6.0.20250928";
+      sha256 = "0bdl3wyspava4l313gaycdqn591wmd114syxwx8h8r6q6vfpjxvw";
     }
     {
       name = "vscode-tailwindcss";
@@ -63,8 +63,8 @@
     {
       name = "svelte-vscode";
       publisher = "svelte";
-      version = "109.11.0";
-      sha256 = "0vcbn6z37zad8q63jr9zv01d0fww63br5cn7rsg3qc3i8imj8h4k";
+      version = "109.11.1";
+      sha256 = "0kl342kqd98vsxw2m3viqfvyvnxwfx4db1v303x3fgfx7apnwb8x";
     }
     {
       name = "vscode-clangd";
@@ -141,8 +141,14 @@
     {
       name = "basedpyright";
       publisher = "detachhead";
-      version = "1.31.4";
-      sha256 = "0ykcc7hqpfgq3q04i2k5kaxdiwp6www37mfh4m0pn64qq3mzd59a";
+      version = "1.31.5";
+      sha256 = "0rwrlchr6d2aab0h24slrjgzaxz5qvjc6a7q1rj75iydr1dj4aqq";
+    }
+    {
+      name = "metals";
+      publisher = "scalameta";
+      version = "1.55.6";
+      sha256 = "0mh4pk6c4bbmkdjjcr7jwcyap7m6jyahb1g0ff2as9yqazr5x3q7";
     }
   ];
 }

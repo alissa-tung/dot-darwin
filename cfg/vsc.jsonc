@@ -53,4 +53,5 @@
   },
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showMoves": true,
+  "terminal.integrated.stickyScroll.enabled": false,
 }
