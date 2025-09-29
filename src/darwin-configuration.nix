@@ -76,6 +76,7 @@
         ruff
         pandoc
         texliveFull
+        sioyek
 
         scala
         scala-cli
