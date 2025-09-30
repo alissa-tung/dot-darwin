@@ -39,8 +39,8 @@
     {
       name = "vscode-typescript-next";
       publisher = "ms-vscode";
-      version = "6.0.20250928";
-      sha256 = "0bdl3wyspava4l313gaycdqn591wmd114syxwx8h8r6q6vfpjxvw";
+      version = "6.0.20250929";
+      sha256 = "01jrvrbxppkcm83p0hcdvba8391fhsknahi6zl1b6fh723knf7vp";
     }
     {
       name = "vscode-tailwindcss";
@@ -69,8 +69,8 @@
     {
       name = "vscode-clangd";
       publisher = "llvm-vs-code-extensions";
-      version = "0.2.0";
-      sha256 = "09az6vx3z4yhcf3ygcl1cxyflngc7ig2wcyjncs93dnaw2xjz5r3";
+      version = "0.3.2";
+      sha256 = "1svy9r0lxxblvvqb4ckm1168bp745a4pp9h1v3cpmlayancvdcnp";
     }
     {
       name = "prisma";
