@@ -7,6 +7,12 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs = {
@@ -14,11 +20,12 @@
     nixpkgs,
     flake-utils,
     nix-darwin,
+    nix-vscode-extensions,
     ...
   }: let
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
-      inherit nixpkgs nix-darwin;
+      inherit nixpkgs nix-darwin nix-vscode-extensions;
     };
   in
     (flake-utils.lib.eachDefaultSystem (

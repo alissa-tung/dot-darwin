@@ -1,6 +1,7 @@
 {
   nixpkgs,
   nix-darwin,
+  nix-vscode-extensions,
 }: rec {
   buildOutputs = let
     names = builtins.attrNames (builtins.readDir ./cfg);
@@ -19,7 +20,7 @@
         {nix.registry.nixpkgs.flake = nixpkgs;}
       ];
       specialArgs = {
-        inherit hostPlatform;
+        inherit hostPlatform nix-vscode-extensions;
       };
     };
   };

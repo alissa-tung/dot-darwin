@@ -1,7 +1,12 @@
-{pkgs, ...}:
+{
+  pkgs,
+  nix-vscode-extensions,
+  hostPlatform,
+  ...
+}:
 pkgs.vscode-with-extensions.override {
-  vscodeExtensions = with pkgs.vscode-extensions;
-    [
+  vscodeExtensions = (
+    with nix-vscode-extensions.extensions.${hostPlatform}.vscode-marketplace; [
       myriad-dreamin.tinymist
       jnoortheen.nix-ide
       ms-python.python
@@ -11,20 +16,38 @@ pkgs.vscode-with-extensions.override {
       james-yu.latex-workshop
       matthewpi.caddyfile-support
       rust-lang.rust-analyzer
-    ]
-    ++ map (
-      extension:
-        pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-          mktplcRef = {
-            inherit
-              (extension)
-              name
-              publisher
-              version
-              sha256
-              ;
+
+      sainnhe.everforest
+      leanprover.lean4
+      redhat.vscode-yaml
+      (ms-vscode-remote.remote-ssh.overrideAttrs (prev: {
+        meta =
+          prev.meta
+          // {
+            license = [];
           };
-        }
-    )
-    (import ../gen/vsc.nix).extensions;
+      }))
+      tamasfe.even-better-toml
+      bradlc.vscode-tailwindcss
+      ms-vscode.vscode-typescript-next
+      bradlc.vscode-tailwindcss
+      yoavbls.pretty-ts-errors
+      million.million-lint
+      svelte.svelte-vscode
+      llvm-vs-code-extensions.vscode-clangd
+      prisma.prisma
+      bufbuild.vscode-buf
+      berberman.vscode-cabal-fmt
+      justusadam.language-haskell
+      dramforever.vscode-ghc-simple
+      haskell.haskell
+      catppuccin.catppuccin-vsc-pack
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+      bamboo.idris2-lsp
+      golang.go
+      detachhead.basedpyright
+      scalameta.metals
+    ]
+  );
 }

@@ -14,8 +14,6 @@ link:
 
 update:
 	(nix flake update)
-	(mkdir -p gen/ && ./scripts/vsc-ext.sh > gen/vsc.nix)
-	(rm -rf ./tmp-for-vsc)
 
 switch:
 	(sudo darwin-rebuild switch --flake .)

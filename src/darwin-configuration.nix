@@ -3,6 +3,7 @@
   config,
   lib,
   hostPlatform,
+  nix-vscode-extensions,
   ...
 }: (
   {
@@ -117,7 +118,9 @@
         libuv
         libiconv
       ]
-      ++ lib.lists.singleton (import ../pkgs/vscode.nix {inherit pkgs;})
+      ++ lib.lists.singleton (
+        import ../pkgs/vscode.nix {inherit pkgs nix-vscode-extensions hostPlatform;}
+      )
       ++ lib.lists.singleton (
         python311.withPackages (
           pythonPackages:
