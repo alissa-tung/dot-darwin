@@ -46,6 +46,8 @@
 
     environment.systemPackages = with pkgs;
       [
+        kitty
+
         zsh
         coreutils
         findutils
