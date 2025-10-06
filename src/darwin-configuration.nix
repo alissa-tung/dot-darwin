@@ -50,6 +50,7 @@
         kitty
 
         zsh
+        zoxide
         coreutils
         findutils
         gnused
@@ -79,6 +80,7 @@
         ruff
         pandoc
         texliveFull
+        texlab
         sioyek
 
         scala
@@ -194,6 +196,7 @@
           source "${pkgs.grml-zsh-config}/etc/zsh/zshrc"
           source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
           source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+          eval "$(zoxide init zsh)"
         ''
         + builtins.readFile ../cfg/zshrc;
     };
