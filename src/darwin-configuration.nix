@@ -10,6 +10,7 @@
     fonts.packages = [
       pkgs.ibm-plex
       pkgs.texlivePackages.fandol
+      pkgs.sarasa-gothic
     ];
 
     nix = {

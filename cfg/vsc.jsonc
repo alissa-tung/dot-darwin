@@ -10,7 +10,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
   "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.colorTheme": "Everforest Dark",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "block",
@@ -54,4 +54,7 @@
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showMoves": true,
   "terminal.integrated.stickyScroll.enabled": false,
+  "editor.fontFamily": "Sarasa Mono SC, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
 }
