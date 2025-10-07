@@ -83,6 +83,7 @@
         texliveFull
         texlab
         sioyek
+        fastfetch
 
         scala
         scala-cli
