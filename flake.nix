@@ -4,12 +4,18 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
-      url = "github:LnL7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
+    mac-app-util = {
+      url = "github:hraban/mac-app-util";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
@@ -21,11 +27,16 @@
     flake-utils,
     nix-darwin,
     nix-vscode-extensions,
-    ...
+    mac-app-util,
   }: let
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
-      inherit nixpkgs nix-darwin nix-vscode-extensions;
+      inherit
+        nixpkgs
+        nix-darwin
+        nix-vscode-extensions
+        mac-app-util
+        ;
     };
   in
     (flake-utils.lib.eachDefaultSystem (

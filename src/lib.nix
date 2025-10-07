@@ -2,6 +2,7 @@
   nixpkgs,
   nix-darwin,
   nix-vscode-extensions,
+  mac-app-util,
 }: rec {
   buildOutputs = let
     names = builtins.attrNames (builtins.readDir ./cfg);
@@ -16,6 +17,7 @@
 
     darwinConfigurations."${hostName}" = nix-darwin.lib.darwinSystem {
       modules = [
+        mac-app-util.darwinModules.default
         ./darwin-configuration.nix
         {nix.registry.nixpkgs.flake = nixpkgs;}
       ];

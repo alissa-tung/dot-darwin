@@ -12,11 +12,7 @@ grml_theme_add_token in-nix-shell -f nix_shell_prompt '%F{cyan}' '%f'
 
 zstyle ':prompt:grml:left:setup' items rc change-root user at host in-nix-shell path vcs newline percent
 
-export HEX_CDN='https://hexpm.upyun.com'
-export HEX_MIRROR="$HEX_CDN"
-
 export PATH="$PATH:$HOME/.cargo/bin"
-
 export PATH="$PATH:$HOME/.ghcup/bin"
 export PATH="$PATH:$HOME/.local/bin/flutter/bin"
 
