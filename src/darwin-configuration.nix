@@ -77,6 +77,7 @@
         nix-output-monitor
         nix-inspect
         helix
+        typescript-language-server
         uv
         ruff
         pandoc
@@ -177,7 +178,8 @@
       ])
       ++ (with haskellPackages; [cabal-fmt])
       ++ [
-        llvm_18
+        llvm
+        lldb
         ormolu
         hlint
       ]
