@@ -10,9 +10,9 @@ fmt:
 	(taplo lint && taplo fmt)
 
 link:
-	(ln -sf ${PWD}/cfg/vsc.jsonc  ${HOME}'/Library/Application Support/Code/User/settings.json')
-	(ln -sf ${PWD}/cfg/kitty.conf ${HOME}'/.config/kitty/kitty.conf')
-	(ln -sf ${PWD}/cfg/helix.toml ${HOME}'/.config/helix/config.toml')
+	(mkdir -p ${HOME}'/Library/Application Support/Code/User' && ln -sf ${PWD}/cfg/vsc.jsonc  ${HOME}'/Library/Application Support/Code/User/settings.json')
+	(mkdir -p ${HOME}'/.config/kitty/kitty'                   && ln -sf ${PWD}/cfg/kitty.conf ${HOME}'/.config/kitty/kitty.conf')
+	(mkdir -p ${HOME}'/.config/helix'                         && ln -sf ${PWD}/cfg/helix.toml ${HOME}'/.config/helix/config.toml')
 	(sudo ./scripts/link-gmp.sh)
 
 update:
