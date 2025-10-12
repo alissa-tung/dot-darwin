@@ -58,6 +58,7 @@
         openssh
         openssl
         git
+        git-lfs
         gh
         gnumake
         cmake
