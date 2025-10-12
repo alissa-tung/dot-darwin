@@ -151,17 +151,17 @@
             ]
         )
       )
-      ++ [
-        # haskellPackages.agda-language-server
-        (agda.withPackages (
-          agdaPackages:
-            with agdaPackages; [
-              standard-library
-              cubical
-              agda-categories
-            ]
-        ))
-      ]
+      # ++ [
+      #   # haskellPackages.agda-language-server
+      #   (agda.withPackages (
+      #     agdaPackages:
+      #       with agdaPackages; [
+      #         standard-library
+      #         cubical
+      #         agda-categories
+      #       ]
+      #   ))
+      # ]
       # ++ [
       #   ocaml
       #   ocamlformat
@@ -185,8 +185,8 @@
         hlint
       ]
       ++ [
-        idris2
-        idris2Packages.idris2Lsp
+        # idris2
+        # idris2Packages.idris2Lsp
       ]
       ++ [
         tinymist

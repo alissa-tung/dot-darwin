@@ -44,7 +44,7 @@ pkgs.vscode-with-extensions.override {
       catppuccin.catppuccin-vsc-pack
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
-      bamboo.idris2-lsp
+      # bamboo.idris2-lsp
       golang.go
       detachhead.basedpyright
       scalameta.metals
