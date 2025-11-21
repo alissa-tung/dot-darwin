@@ -47,7 +47,6 @@ pkgs.vscode-with-extensions.override {
       # bamboo.idris2-lsp
       golang.go
       detachhead.basedpyright
-      scalameta.metals
     ]
   );
 }

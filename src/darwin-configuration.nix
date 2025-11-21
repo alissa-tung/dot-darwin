@@ -7,10 +7,19 @@
   ...
 }: (
   {
+    system.primaryUser = "alissa";
+    # services.yabai.enable = true;
+
+    # users.users.alissa = {
+    #   name = "alissa";
+    # };
+
     fonts.packages = [
       pkgs.ibm-plex
       pkgs.texlivePackages.fandol
       pkgs.sarasa-gothic
+      pkgs.noto-fonts-cjk-serif
+      pkgs.noto-fonts-cjk-sans
     ];
 
     nix = {
@@ -24,9 +33,9 @@
 
         substituters = [
           "https://mirrors.bfsu.edu.cn/nix-channels/store/"
-          # "https://mirror.sjtu.edu.cn/nix-channels/store/"
           "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
           "https://mirrors.ustc.edu.cn/nix-channels/store/"
+          # "https://mirror.sjtu.edu.cn/nix-channels/store/"
         ];
 
         trusted-users = [
@@ -44,11 +53,14 @@
     environment.variables = {
       EDITOR = "hx";
       LANG = "en_US.UTF-8";
+      LC_ALL = "en_US.UTF-8";
     };
 
     environment.systemPackages = with pkgs;
       [
         kitty
+        # yabai
+        # skhd
 
         zsh
         zoxide
@@ -73,7 +85,7 @@
         tree
         rlwrap
         bottom
-        du-dust
+        dust
         delta
         nix-output-monitor
         nix-inspect
@@ -86,13 +98,6 @@
         texlab
         sioyek
         fastfetch
-
-        scala
-        scala-cli
-        metals
-        scalafmt
-        scalafix
-        sbt
       ]
       ++ [
         alejandra
@@ -107,10 +112,8 @@
         elan
         protobuf
         buf
-        # protoc-gen-dart
         go
         goreleaser
-        # millet
         black
       ]
       ++ [
@@ -202,6 +205,7 @@
           source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
           source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
           eval "$(zoxide init zsh)"
+          alias zed-cli=/usr/local/bin/zed
         ''
         + builtins.readFile ../cfg/zshrc;
     };
