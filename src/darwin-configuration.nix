@@ -103,6 +103,7 @@
         alejandra
         nixfmt-rfc-style
         nil
+        nixd
         taplo
         shellcheck
       ]
@@ -115,6 +116,7 @@
         go
         goreleaser
         black
+        tailwindcss-language-server
       ]
       ++ [
         caddy
@@ -205,7 +207,7 @@
           source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
           source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
           eval "$(zoxide init zsh)"
-          alias zed-cli=/usr/local/bin/zed
+          alias zz=/usr/local/bin/zed
         ''
         + builtins.readFile ../cfg/zshrc;
     };

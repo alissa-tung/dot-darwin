@@ -10,7 +10,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "git.openRepositoryInParentFolders": "always",
   "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Everforest Dark",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "block",
@@ -39,7 +39,7 @@
   "[typst-code]": {
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   },
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-frappe",
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "python.analysis.typeEvaluation.strictDictionaryInference": true,
