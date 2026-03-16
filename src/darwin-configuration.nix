@@ -133,7 +133,7 @@
         import ../pkgs/vscode.nix {inherit pkgs nix-vscode-extensions hostPlatform;}
       )
       ++ lib.lists.singleton (
-        python311.withPackages (
+        python314.withPackages (
           pythonPackages:
             with pythonPackages; [
               # uv

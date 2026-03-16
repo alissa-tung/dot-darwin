@@ -57,4 +57,11 @@
   "editor.fontFamily": "Sarasa Mono SC, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
+  "remote.SSH.defaultExtensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter-renderers",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter",
+  ],
+  "chat.disableAIFeatures": true,
 }
