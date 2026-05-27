@@ -8,19 +8,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    mac-app-util = {
-      url = "github:hraban/mac-app-util";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-      inputs.cl-nix-lite.inputs.nixpkgs.follows = "nixpkgs";
-      inputs.cl-nix-lite.inputs.treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # mac-app-util = {
+    #   url = "github:hraban/mac-app-util";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.flake-utils.follows = "flake-utils";
+    #   inputs.treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.cl-nix-lite.inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.cl-nix-lite.inputs.treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
@@ -28,16 +23,14 @@
     nixpkgs,
     flake-utils,
     nix-darwin,
-    nix-vscode-extensions,
-    mac-app-util,
+    # mac-app-util,
   }: let
     lib = nixpkgs.lib;
     flake-lib = import ./src/lib.nix {
       inherit
         nixpkgs
         nix-darwin
-        nix-vscode-extensions
-        mac-app-util
+        # mac-app-util
         ;
     };
   in

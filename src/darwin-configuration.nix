@@ -3,16 +3,10 @@
   config,
   lib,
   hostPlatform,
-  nix-vscode-extensions,
   ...
 }: (
   {
     system.primaryUser = "alissa";
-    # services.yabai.enable = true;
-
-    # users.users.alissa = {
-    #   name = "alissa";
-    # };
 
     fonts.packages = [
       pkgs.ibm-plex
@@ -20,6 +14,9 @@
       pkgs.sarasa-gothic
       pkgs.noto-fonts-cjk-serif
       pkgs.noto-fonts-cjk-sans
+      pkgs.nerd-fonts.jetbrains-mono
+      pkgs.nerd-fonts.fira-code
+      pkgs.nerd-fonts.symbols-only
     ];
 
     nix = {
@@ -58,10 +55,6 @@
 
     environment.systemPackages = with pkgs;
       [
-        kitty
-        # yabai
-        # skhd
-
         zsh
         zoxide
         coreutils
@@ -89,7 +82,6 @@
         delta
         nix-output-monitor
         nix-inspect
-        helix
         typescript-language-server
         uv
         ruff
@@ -129,9 +121,6 @@
         libuv
         libiconv
       ]
-      ++ lib.lists.singleton (
-        import ../pkgs/vscode.nix {inherit pkgs nix-vscode-extensions hostPlatform;}
-      )
       ++ lib.lists.singleton (
         python314.withPackages (
           pythonPackages:
@@ -176,7 +165,7 @@
       #   findlib
       #   ocaml-lsp
       # ])
-      ++ (with pkgs.nodePackages_latest; [
+      ++ (with pkgs; [
         nodejs
         prettier
         pnpm
@@ -186,8 +175,6 @@
       ++ [
         llvm
         lldb
-        ormolu
-        hlint
       ]
       ++ [
         # idris2
