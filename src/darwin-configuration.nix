@@ -48,13 +48,13 @@
     };
 
     environment.variables = {
-      EDITOR = "hx";
       LANG = "en_US.UTF-8";
       LC_ALL = "en_US.UTF-8";
     };
 
     environment.systemPackages = with pkgs;
       [
+        emacs
         zsh
         zoxide
         coreutils
@@ -74,7 +74,7 @@
         ripgrep
         jq
         curl
-        unar
+        # unar
         tree
         rlwrap
         bottom
@@ -88,7 +88,6 @@
         pandoc
         texliveFull
         texlab
-        sioyek
         fastfetch
       ]
       ++ [
@@ -105,8 +104,6 @@
         elan
         protobuf
         buf
-        go
-        goreleaser
         black
         tailwindcss-language-server
       ]
@@ -166,12 +163,18 @@
       #   ocaml-lsp
       # ])
       ++ (with pkgs; [
-        nodejs
+        nodejs_26
         prettier
-        pnpm
+        (pnpm.override {nodejs = nodejs_26;})
         eslint
       ])
       ++ (with haskellPackages; [cabal-fmt])
+      ++ [
+        haskell-language-server
+        ghc
+        ormolu
+        cabal-install
+      ]
       ++ [
         llvm
         lldb
@@ -179,10 +182,6 @@
       ++ [
         # idris2
         # idris2Packages.idris2Lsp
-      ]
-      ++ [
-        tinymist
-        typst
       ];
 
     programs.zsh = {
